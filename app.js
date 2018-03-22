@@ -27,7 +27,7 @@ app.use(function (req, res, next) {
 })
 // -----------------------------------------------------------------------
 
-const maxUsers = 4
+const maxUsers = 6
 users = []
 
 
@@ -54,6 +54,10 @@ io.on('connection', function(socket){
       users.splice(users.indexOf(nick), 1);
       io.emit('updateUsers', users);
     }
+  })
+
+  socket.on('getUsers', function(){
+    socket.emit('updateUsers', users)
   })
 
 })

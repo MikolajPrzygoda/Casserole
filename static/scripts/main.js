@@ -1,6 +1,7 @@
 $(document).ready(function(){
   var socket = io()
   socketListeners()
+  socket.emit('getUsers')
 
   var nick = ''
   var users = {}
@@ -37,12 +38,17 @@ $(document).ready(function(){
       }
     });
 
-  }
-
-  function init(){
-    socket.emit('updateUsers');
-
     socket.on('updateUsers', function(data){
+      //Update counter on loginDiv
+      $('#onlineCounter').html('' + data.length)
+      if(data.length == 6){
+        $('#onlineCounter').css('color', 'red')
+      }
+      else{
+        $('#onlineCounter').css('color', 'black')
+      }
+
+      //Update users list
       $('#onlineUsers').html('');
       data.forEach(function(element, index){
         $('#onlineUsers').append( $('<li>').html(element) );
@@ -50,6 +56,9 @@ $(document).ready(function(){
       });
     });
 
+  }
+
+  function init(){
     $(window).on('beforeunload', function(){
       socket.emit('logout', nick);
     });

@@ -41,6 +41,16 @@ body {
   font-size: 8em;
   font-family: "Arial";
 }
+#onlineCounter {
+  position: absolute;
+  top: calc(50% - 80px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 2em;
+}
+#onlineCounter::after {
+  content: "/6"
+}
 #loginDiv {
   position: absolute;
   top: 50%;
@@ -83,7 +93,8 @@ body {
   list-style-type: none;
 }
 #onlineUsers li {
-  padding: 10px;
+  height: calc(100vh / 6);
+  line-height: calc(100vh / 6);
   text-align: center;
   border-bottom: 3px dashed #ABBCFF;
 }
