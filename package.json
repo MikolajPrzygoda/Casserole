@@ -1,0 +1,22 @@
+{
+  "name": "casserole",
+  "version": "0.0.1",
+  "description": "Carcassonne rip-off",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrPain992/Casserole.git"
+  },
+  "author": "Mikolaj Przygoda",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MrPain992/Casserole/issues"
+  },
+  "homepage": "https://github.com/MrPain992/Casserole#readme"
+}
