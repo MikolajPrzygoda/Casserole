@@ -1,4 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+body {
+  background-color: #ABBCFF;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  height: 100vh;
+}
+#content {
+  position: absolute;
+  width: 1200px;
+  height: 700px;
+  left: calc(50% - 100px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.7s;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: -3px 3px 5px grey;
+}
+#content.hiddenUserList {
+  left: 50%;
+}
+#loginCover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  /*background-color: #ABBCFF;*/ /* == rgba(171, 188, 255, 1)*/
+  background: linear-gradient(to bottom, rgba(171, 188, 255, 1) 95%, rgba(171, 188, 255, 0) 100%)
+}
 #title{
+  position: absolute;
+  top: calc(50% - 200px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 8em;
+  font-family: "Arial";
+}
+#loginDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: #f00;
+}
+#loginDiv * {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+#onlineUsersDiv {
+  position: absolute;
+  width: 200px;
+  height: 100vh;
+  right: -200px;
+  box-shadow: -3px 3px 5px grey;
+  background-color: #ABE6FF;
+  transition-duration: 0.7s;
+  overflow: visible;
+}
+#onlineUsersDiv.show {
+  right: 0px;
+}
+#toggleOnlineUsers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0);
+  width: 10px;
+  height: 20px;
+  background-color: #8BC6FF;
+  box-shadow: -3px 3px 5px grey;
+  cursor: pointer;
+}
+#onlineUsers {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+}
+#onlineUsers li {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 3px dashed #ABBCFF;
 }

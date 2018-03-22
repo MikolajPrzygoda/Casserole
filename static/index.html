@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="static/styles/main-stylesheet.css" type="text/css" rel="stylesheet"/>
+  <title>Casserole</title>
+  <link href="styles/main-stylesheet.css" type="text/css" rel="stylesheet"/>
+
+  <script src="/jquery/jquery.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scripts/main.js"/></script>
+  <script src="scripts/listeners.js"/></script>
 </head>
 <body>
-  <h1 id="title">Casserole</h1>
+  <div id="content">
+  </div>
+  <div id="toolbar">
+  </div>
+
+  <div id="onlineUsersDiv" class="show">
+    <div id="toggleOnlineUsers"></div>
+    <ul id="onlineUsers"></ul>
+  </div>
+
+  <div id="loginCover">
+    <p id="title">Casserole</p>
+    <div id="loginDiv">
+      <form action="" autocomplete="off" >
+        <label><input type="text" id="nick" placeholder="Your nick" maxlength="20"/></label><br />
+        <input type="submit" value="Start" />
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
